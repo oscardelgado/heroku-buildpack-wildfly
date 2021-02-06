@@ -45,8 +45,7 @@ echo $BIN_DIR
 # MySQL client
 curl -O https://cdn.mysql.com/archives/mysql-shell/mysql-shell-8.0.22-linux-glibc2.12-x86-64bit.tar.gz
 tar -zxvf mysql-shell-8.0.22-linux-glibc2.12-x86-64bit.tar.gz
-ls -ltr
-
+ln -s mysql-shell-8.0.22-linux-glibc2.12-x86-64bit/bin/mysqlsh bin/mysql
 echo "MySQL client downloaded"
 
 echo -n "-----> Deploying war file(s)... "
