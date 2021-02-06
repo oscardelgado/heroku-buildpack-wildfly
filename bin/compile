@@ -22,7 +22,7 @@ install_java_with_overlay ${BUILD_DIR}
 
 WILDFLY_VERSION="16.0.0.Final"
 WILDFLY_SHA1="287c21b069ec6ecd80472afec01384093ed8eb7d"
-JBOSS_HOME="/app/.jboss/wildfly-${WILDFLY_VERSION}"
+JBOSS_HOME=".jboss/wildfly-${WILDFLY_VERSION}"
 
 cd $BUILD_DIR
 
@@ -59,7 +59,7 @@ fi
 cat << EOF > $BUILD_DIR/.profile.d/jboss.sh
 export JBOSS_HOME=${JBOSS_HOME}
 # prevent WFLYLOG0078
-export JAVA_TOOL_OPTIONS="\${JAVA_TOOL_OPTIONS} -Djboss.modules.system.pkgs=org.jboss.logmanager"
-export JAVA_TOOL_OPTIONS="\${JAVA_TOOL_OPTIONS} -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
-export JAVA_TOOL_OPTIONS="\${JAVA_TOOL_OPTIONS} -Xbootclasspath/p:$JBOSS_HOME/modules/system/layers/base/org/jboss/logmanager/main/jboss-logmanager-2.0.4.Final.jar"
+#export JAVA_TOOL_OPTIONS="\${JAVA_TOOL_OPTIONS} -Djboss.modules.system.pkgs=org.jboss.logmanager"
+#export JAVA_TOOL_OPTIONS="\${JAVA_TOOL_OPTIONS} -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
+#export JAVA_TOOL_OPTIONS="\${JAVA_TOOL_OPTIONS} -Xbootclasspath/p:$JBOSS_HOME/modules/system/layers/base/org/jboss/logmanager/main/jboss-logmanager-2.0.4.Final.jar"
 EOF
