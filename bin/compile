@@ -43,7 +43,7 @@ echo "done"
 echo $BIN_DIR
 
 # MySQL client
-curl -O https://downloads.mysql.com/archives/get/p/23/file/mysql-8.0.22-linux-glibc2.17-x86_64-minimal.tar.xz
+curl -O https://cdn.mysql.com/archives/mysql-8.0/mysql-8.0.22-linux-glibc2.17-x86_64-minimal.tar.xz
 echo "MySQL client downloaded"
 tar -xf mysql-8.0.22-linux-glibc2.17-x86_64-minimal.tar.xz
 echo "MySQL client extracted"
