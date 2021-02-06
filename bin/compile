@@ -43,9 +43,10 @@ echo "done"
 echo $BIN_DIR
 
 # MySQL client
-curl -O https://cdn.mysql.com/archives/mysql-shell/mysql-shell-8.0.22-linux-glibc2.12-x86-64bit.tar.gz
-tar -zxvf mysql-shell-8.0.22-linux-glibc2.12-x86-64bit.tar.gz
+curl -O https://downloads.mysql.com/archives/get/p/23/file/mysql-8.0.22-linux-glibc2.17-x86_64-minimal.tar.xz
 echo "MySQL client downloaded"
+tar -xf mysql-8.0.22-linux-glibc2.17-x86_64-minimal.tar.xz
+echo "MySQL client extracted"
 
 echo -n "-----> Deploying war file(s)... "
 cp target/*.war $JBOSS_HOME/standalone/deployments/
