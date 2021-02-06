@@ -40,6 +40,9 @@ echo "moved"
 rm wildfly-$WILDFLY_VERSION.tar.gz
 echo "done"
 
+curl -O https://repository.jboss.org/nexus/content/groups/public/org/jboss/logmanager/jboss-logmanager/2.0.4.Final/jboss-logmanager-2.0.4.Final.jar
+mv jboss-logmanager-2.0.4.Final.jar $JBOSS_HOME/modules/system/layers/base/org/jboss/logmanager/main/
+
 echo -n "-----> Deploying war file(s)... "
 cp target/*.war $JBOSS_HOME/standalone/deployments/
 echo "done"
