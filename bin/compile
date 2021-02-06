@@ -40,10 +40,14 @@ echo "moved"
 rm wildfly-$WILDFLY_VERSION.tar.gz
 echo "done"
 
+echo $BIN_DIR
+
 # MySQL client
 curl -O https://cdn.mysql.com/archives/mysql-shell/mysql-shell-8.0.22-linux-glibc2.12-x86-64bit.tar.gz
 tar zxvf mysql-shell-8.0.22-linux-glibc2.12-x86-64bit.tar.gz
 mv mysql-shell-8.0.22-linux-glibc2.12-x86-64bit $BIN_DIR
+
+echo "MySQL client downloaded"
 
 echo -n "-----> Deploying war file(s)... "
 cp target/*.war $JBOSS_HOME/standalone/deployments/
